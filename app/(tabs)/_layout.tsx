@@ -1,6 +1,7 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
 import { Platform } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 import { HapticTab } from '@/components/HapticTab';
 import { IconSymbol } from '@/components/ui/IconSymbol';
@@ -26,6 +27,13 @@ export default function TabLayout() {
           default: {},
         }),
       }}>
+      <Tabs.Screen
+        name="photoSequence"
+        options={{
+          title: 'Photo Sequence',
+          tabBarIcon: ({ color }) => <Ionicons name="images" size={24} color={color} />,
+        }}
+      />
       <Tabs.Screen
         name="index"
         options={{
